@@ -1,21 +1,5 @@
 const router = require('express').Router();
-let Review = require('../models/review.model');
-
-function toBr(s){
-  s += " ";
-  console.log(s);
-  result = "";
-  for (var i = 0; i <= s.length; i++) {
-    test = s.charAt(i)+s.charAt(i+1);
-    if(test == "\n"){
-      result += "<br/>";
-      i++;
-    } else {
-      result += s.charAt(i);
-    }
-  }
-  return result;
-}
+const Review = require('../models/review.model');
 
 router.route('/').get((req, res) => {
   Review.find()
