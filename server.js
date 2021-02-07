@@ -35,7 +35,6 @@ connection.once('open', () => {
 const usersRoutes = require('./routes/users');
 const reviewsRoutes = require('./routes/reviews');
 
-// Middleware
 app.use('/users',usersRoutes);
 app.use('/reviews',reviewsRoutes);
 
